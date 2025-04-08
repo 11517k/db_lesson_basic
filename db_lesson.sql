@@ -90,3 +90,33 @@ mysql> CREATE TABLE departments (
     SELECT people.name FROM people LEFT OUTER JOIN reports
     ON people.person_id = reports.person_id
     WHERE reports.person_id IS NULL;
+
+
+mysqldump -u root -p db_lesson > backup.sql
+
+mysql -u root -p
+
+CREATE DATABASE db_lesson2;
+
+exit
+
+mysql -u root -p db_lesson2 < backup.sql
+
+・RDB (リレーショナルデータベース)とは何か？
+　RDBはテーブルと呼ばれる表形式でデータを管理している
+　テーブルは、カラム（列）とレコード（行）で構成されている
+
+・DBMSへの命令文を何というでしょう？
+　クエリ
+・departmentsテーブルの全てのカラムのデータ型を教えてください。
+・UNSINEDはなぜ入れているのでしょうか？
+・ALTER TABLEは何を行う時に使用する？
+・peopleテーブルは部署情報をどのカラムで持っている？
+・他のテーブルの情報を持つカラムのことをなんという？
+・created_atやupdated_atを指定しなくても勝手に今日の日付が入るのはなぜ？
+・複数のレコードをINSERTすることを何というか？
+・BETWEENは何をするための構文ですか？
+・*は何を表すか？
+・AVG以外にどのような集計関数がありますか？
+・内部結合と外部結合の違いを説明してください。
+・RIGHT JOINとLEFT JOINの違いを説明してください。
